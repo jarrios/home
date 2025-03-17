@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Mosquito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+            <a class="menu-opt" href="#">Sobre Nosotros</a>
+            <a class="menu-opt" href="#">Juegos</a>
+            <a class="menu-opt" href="#">Introducción</a>
+        </div>
+
+        <div id="mainContent">
+            <div class="top-bar">
+                <span class="open-btn" onclick="openMenu()">&#9776;</span>
+                <form class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit">🔍</button>
+                </form>
+            </div>
+            <center>
+                <h2>Sobre Nosotros</h2>
+                <p>Somos un grupo de 6 niños del IES Ruíz Gijón que hemos participado en el proyecto "Mosquito Alert"</p>
+            </center>
+            <br>
+            <strong>El grupo está formado por: </strong>
+            <ul>
+                <li>Berengeno Ruiz, Lola</li>
+                <li>Figueredo Durán, Lucía</li>
+                <li>Ramírez Guerrero, Mateo</li>
+                <li>Rodríguez Gelo, Alba María</li>
+                <li>Román García, Mario</li>
+                <li>Rubio Moreno, Alexia</li>
+            </ul>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+    </header>
+
+    <footer>
+
+        <center>
+            <div class="comments-section">
+                <h2>Comentarios</h2>
+                <form class="comment-form">
+                    <label for="comment">Deja tu comentario:</label>
+                    <br>
+                    <textarea id="comment" name="comment" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="comments-list">
+                    <p>No hay comentarios aún. ¡Sé el primero en comentar!</p>
+                </div>
+            </div>
+        </center>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

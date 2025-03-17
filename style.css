@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+
+:root {
+    --yellow-50: #fefee8;
+    --yellow-100: #feffc2;
+    --yellow-200: #fffc89;
+    --yellow-300: #fff44f;
+    --yellow-400: #fde512;
+    --yellow-500: #ecca06;
+    --yellow-600: #cc9f02;
+    --yellow-700: #a37105;
+    --yellow-800: #86590d;
+    --yellow-900: #724811;
+    --yellow-950: #432605;
+}
+
+* {
+    font-family: "Montserrat Alternates";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden; /*? Esto evita el scroll horizontal */
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu .menu-opt:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mainContent {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #111;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*! Media Queries */
+
+@media screen and (max-width: 768px) {
+    .side-menu a {
+        font-size: 20px;
+        padding: 8px 8px 8px 16px;
+    }
+
+    .side-menu .close-btn {
+        font-size: 30px;
+        right: 15px;
+    }
+
+    .open-btn {
+        font-size: 25px;
+    }
+
+    #mainContent {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    .side-menu {
+        width: 100%;
+    }
+
+    #mainContent {
+        margin-left: 100%;
+    }
+
+    .side-menu a { 
+        font-size: 18px; 
+        padding: 8px 8px 8px 10px; 
+    } 
+    
+    .side-menu .close-btn {
+        font-size: 24px; 
+        right: 10px; 
+    } 
+    .open-btn { 
+        font-size: 20px; 
+    } 
+    
+    #mainContent {
+        padding: 8px; 
+    } 
+}
+
+/** Estilo de la barra superior */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+/** Apartados comentarios */
+
+.comments-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-form button {
+    padding: 10px;
+    border: none;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.comment-form button:hover {
+    background-color: #333;
+}
+
+.comments-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+/** Barra de progreso de lectura */
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.progress-bar {
+    height: 5px;
+    background: linear-gradient(to right, #FCFFC1, #FB9EC6); 
+    width: 0%;
+}
+
+/** Animacion de lectura */
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
