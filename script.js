@@ -47,3 +47,6 @@ function reveal() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    closeMenu();
+});
